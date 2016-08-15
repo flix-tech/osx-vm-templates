@@ -129,7 +129,7 @@
     }
   ],
   "variables": {
-    "autologin": "false",
+    "autologin": "true",
     "chef_version": "none",
     "facter_version": "none",
     "hiera_version": "none",
