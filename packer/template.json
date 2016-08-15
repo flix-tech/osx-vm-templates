@@ -110,7 +110,9 @@
         "../scripts/add-network-interface-detection.sh",
         "../scripts/autologin.sh",
         "../scripts/system-update.sh",
-        "../scripts/shrink.sh"
+        "../scripts/shrink.sh",
+        "../scripts/homebrew.sh",
+        "../scripts/ruby.sh"
       ],
       "environment_vars": [
         "AUTOLOGIN={{user `autologin`}}",
