@@ -69,6 +69,7 @@
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
       "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--audio", "null"],
         ["modifyvm", "{{.Name}}", "--audiocontroller", "hda"],
         ["modifyvm", "{{.Name}}", "--boot1", "dvd"],
         ["modifyvm", "{{.Name}}", "--boot2", "disk"],
