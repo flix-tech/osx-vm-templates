@@ -99,6 +99,11 @@
       "type": "file"
     },
     {
+      "destination": "{{user `xcode_dmg`}}",
+      "source": "{{user `xcode_dmg_source`}}",
+      "type": "file"
+    },
+    {
       "execute_command": "chmod +x {{ .Path }}; sudo {{ .Vars }} {{ .Path }}",
       "scripts": [
         "../scripts/vagrant.sh",
@@ -112,7 +117,8 @@
         "../scripts/system-update.sh",
         "../scripts/shrink.sh",
         "../scripts/homebrew.sh",
-        "../scripts/ruby.sh"
+        "../scripts/ruby.sh",
+        "../scripts/xcode.sh"
       ],
       "environment_vars": [
         "AUTOLOGIN={{user `autologin`}}",
@@ -126,7 +132,9 @@
         "PUPPET_VERSION={{user `puppet_version`}}",
         "PUPPET_AGENT_VERSION={{user `puppet_agent_version`}}",
         "UPDATE_SYSTEM={{user `update_system`}}",
-        "USERNAME={{user `username`}}"
+        "USERNAME={{user `username`}}",
+        "XCODE_DMG={{user `xcode_dmg`}}",
+        "XCODE_VERSION={{user `xcode_version`}}"
       ],
       "type": "shell"
     }
@@ -144,6 +152,9 @@
     "puppet_version": "none",
     "puppet_agent_version": "none",
     "update_system": "true",
-    "username": "vagrant"
+    "username": "vagrant",
+    "xcode_dmg_source": null,
+    "xcode_version": null,
+    "xcode_dmg": "/private/tmp/Xcode.dmg"
   }
 }
