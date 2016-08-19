@@ -109,6 +109,7 @@
         "../scripts/vagrant.sh",
         "../scripts/vmware.sh",
         "../scripts/parallels.sh",
+        "../scripts/os-settings.sh",
         "../scripts/xcode-cli-tools.sh",
         "../scripts/chef-omnibus.sh",
         "../scripts/puppet.sh",
